@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h2>Simple Registration</h2>
+      <h2>Registration App</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
