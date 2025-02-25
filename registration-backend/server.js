@@ -8,9 +8,9 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Parse JSON body
 
-app.use(express.static(path.join(__dirname, "registration-frontend/build")));
+app.use(express.static(path.join(__dirname, "../registration-frontend/build")));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "registration-frontend/build", "index.html"));
+  res.sendFile(path.join(__dirname, "../registration-frontend/build", "index.html"));
 });
 // PostgreSQL Connection
 const pool = new Pool({
