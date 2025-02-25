@@ -15,17 +15,18 @@ const pool = new Pool({
 const helmet = require('helmet');
 
 //Helps with the restrictive CSP headers
+const helmet = require("helmet");
 app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "'unsafe-inline'"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'", "data:", "https://ashley-registration-application.onrender.com"],
       },
     },
   })
 );
+
 
 // Route to handle registration
 app.post("/register", async (req, res) => {
