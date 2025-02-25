@@ -12,7 +12,6 @@ const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false }, // Needed for Render
 });
-const helmet = require('helmet');
 
 //Helps with the restrictive CSP headers
 const helmet = require("helmet");
