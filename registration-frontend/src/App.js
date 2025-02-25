@@ -14,7 +14,7 @@ function App() {
       const response = await axios.post('https://ashley-registration-application.onrender.com/register', { name, email });
       setMessage(response.data.message);
     } catch (error) {
-      setMessage('Error registering user');
+      setMessage('Error registering');
     }
   };
 
